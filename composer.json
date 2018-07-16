@@ -15,7 +15,6 @@
         "php": ">=5.5.9",
         "illuminate/support": ">=5.0",
         "guzzlehttp/guzzle": "^6.2",
-        "PHPOffice/PhpSpreadsheet": "dev-master#b4a187bef84c36741fa2393f96c8483c059642c9",
         "predis/predis": "1.1.*"
     },
     "require-dev": {
