@@ -1,0 +1,44 @@
+{
+    "name": "laravel-ladder/core",
+    "type": "library",
+    "description": "Laravel-ladder,More convenient",
+    "keywords": [],
+    "homepage": "http://zhanghaiqiang.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zhangzhq888",
+            "email": "zhangzhq888@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": ">=5.0",
+        "guzzlehttp/guzzle": "^6.2",
+        "PHPOffice/PhpSpreadsheet": "dev-master#b4a187bef84c36741fa2393f96c8483c059642c9",
+        "predis/predis": "1.1.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "laravel/framework": "5.2.*",
+        "barryvdh/laravel-ide-helper": "2.4.*",
+        "jlapp/swaggervel": "dev-master",
+        "tymon/jwt-auth": "0.5.*"
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    },
+    "autoload": {
+        "files": [
+          "src/helpers.php"
+        ],
+        "psr-4" : {
+            "Laravelladder\\Core\\" : "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
