@@ -24,7 +24,7 @@ class BaseResponse extends Response {
         $this->{static::FIELD_MESSAGE} = $message;
         $this->{static::FIELD_DATA} = $data;
         $this->{static::FIELD_REPORT} = $report;
-        $this->{static::FIELD_TRACK} = \Config::get('app.name') . Request\Helper::getRequestId();
+        $this->{static::FIELD_TRACK} = Request\Helper::getRequestId();
     }
 
     /**

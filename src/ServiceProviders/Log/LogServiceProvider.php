@@ -20,20 +20,20 @@ class LogServiceProvider extends ServiceProvider
     }
 
     public static $folderPath = "/opt/logs/";
-	
-	/**
-	 * 获取日志文件路径
-	 * @param $folderPath
-	 * @return string
-	 */
+
+    /**
+     * 获取日志文件路径
+     * @param $folderPath
+     * @return string
+     */
     public static function getLogPath($folderPath){
-    	return $folderPath . App::getRequestAppName() . ".log";
+        return $folderPath . App::getRequestAppName() . ".log";
     }
-	
-	public static function getErrorLogPath($folderPath){
-		return $folderPath . App::getRequestAppName() . ".error";
-	}
-	
+
+    public static function getErrorLogPath($folderPath){
+        return $folderPath . App::getRequestAppName() . ".error";
+    }
+
     /**
      * Register any application services.
      *
@@ -46,11 +46,11 @@ class LogServiceProvider extends ServiceProvider
         $logger = new Writer(new Logger($app->environment()), $app['events']);
 
         // Daily files are better for production stuff
-	    $path = static::getLogPath(static::$folderPath);
-	    $logger->useFiles($path);
-	    $errorPath = static::getErrorLogPath(static::$folderPath);
-	    $logger->useFiles($errorPath, 'error');
-	    
+        $path = static::getLogPath(static::$folderPath);
+        $logger->useFiles($path);
+        $errorPath = static::getErrorLogPath(static::$folderPath);
+        $logger->useFiles($errorPath, 'error');
+
         $app->instance('log', $logger);
 
         // Next we will bind the a Closure to resolve the PSR logger implementation
