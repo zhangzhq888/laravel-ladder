@@ -48,7 +48,7 @@ abstract class EloquentBaseRepository extends BaseRepository
 	 * @return string
 	 */
 	public static function getTableName(){
-		return (static::getModel())::TABLE_NAME;
+		return config('database.connections.mysql.prefix').(static::getModel())::TABLE_NAME;
 	}
 	/*
 	|--------------------------------------------------------------------------
