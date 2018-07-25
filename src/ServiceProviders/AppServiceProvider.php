@@ -43,8 +43,5 @@ class AppServiceProvider extends ServiceProvider
             }
         }
 
-        // 因为我们采用Angularjs，所以要把{{ }} 替换成 <% %>
-        \Blade::setContentTags('<%', '%>');
-        \Blade::setEscapedContentTags('<%%', '%%>');// for escaped data
     }
 }
