@@ -38,7 +38,7 @@ class Rule {
         foreach($rules as $key => $rule){
             if(!is_array($rule)) continue;
             $validationRules = static::makeValidationRule($rule);
-            if(count($validationRules) > 0){
+            if(is_array($validationRules) && count($validationRules) > 0){
                 $r[$key] = $validationRules;
             }
         }
